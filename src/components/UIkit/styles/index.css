@@ -1,11 +1,21 @@
 :root {
-    --color-dark: #1f1f1f;
+    --color-primery: 33, 122, 255;
+    --color-secondary: 33, 122, 255;
+    --color-dark: 30, 30, 30;
+    --color-white: 255, 255, 255;
+    --color-success: 39, 246, 122;
+    --color-danger: 246, 39, 185;
+
+    --font-primery: Robot, sans-serif;
 }
 
-.input {
-    width: 100%;
-    height: 48px;
-    border-radius: 50%/5%;
-    background: rgba(31, 31, 31, 0.02);
-    border: 1px solid rgba(31, 31, 31, 0.24);
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    /*-webkit-tap-highlight-color: rgb(39, 246, 122);*/
 }
