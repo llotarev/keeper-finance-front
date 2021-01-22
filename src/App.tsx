@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.css';
-import './components/UIkit/styles/index.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router} from 'react-router-dom';
-import {Input} from './components/UIkit/Input';
-import {Button} from "./components/UIkit/Button";
+import {Button, Form} from 'react-bootstrap';
 
 
 function App() {
@@ -11,9 +10,9 @@ function App() {
     return (
         <Router>
             <div className='app'>
-                <Input content='right' placeholder='Name' defaultValue='sds'/>
-                <Button content="left">
-                    Текст
+                <Form.Control placeholder='sds'/>
+                <Button>
+                    Текс
                 </Button>
             </div>
         </Router>
