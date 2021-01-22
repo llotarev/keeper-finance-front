@@ -6,7 +6,7 @@ function classNames(classes: object): string {
         if (value) classNames += ` ${key}`;
     })
 
-    return classNames;
+    return classNames.trim();
 }
 
 export default classNames;

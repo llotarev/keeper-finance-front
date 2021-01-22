@@ -1,4 +1,6 @@
+@import url(./components/UIKit/styles/index.css);
+
 .app {
     padding: 20px;
-    /*background: #1f1f1f;*/
+    background: rgba(var(--color-dark), 1);
 }
