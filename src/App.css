@@ -1,0 +1,12 @@
+.app {
+    padding: 20px 10%;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+.app input,
+.app button {
+    margin: 12px 0;
+}
