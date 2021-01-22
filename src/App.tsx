@@ -1,22 +1,20 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {BrowserRouter as Router} from 'react-router-dom';
-import {Button, Form} from 'react-bootstrap';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {routes} from './routes';
+import {Finance} from "./components/Finance";
 
 
-function App() {
+export function App() {
 
     return (
         <Router>
             <div className='app'>
-                <Form.Control placeholder='sds'/>
-                <Button>
-                    Текс
-                </Button>
+                <Route path={routes.root}>
+                    <Finance/>
+                </Route>
             </div>
         </Router>
     );
 }
-
-export default App;

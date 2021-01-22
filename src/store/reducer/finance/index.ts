@@ -1,9 +1,14 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {financeThunk} from "./thunk";
 import {StateType} from "../../index";
+import {IFinance} from "../../../api";
+
+interface IFinanceItem extends IFinance {
+    id: number
+}
 
 type InitialStateType = {
-    finance: any[]
+    finance: IFinanceItem[]
 }
 
 const initialState: InitialStateType = {
