@@ -2,7 +2,7 @@ import React, {FC} from "react";
 import cn from "../styles/classNames";
 import './Input.css';
 
-export interface UIKitInputElement extends React.AllHTMLAttributes<HTMLInputElement> {
+export interface UIKitInputElement extends React.InputHTMLAttributes<HTMLInputElement> {
     block?: boolean,
     content?: "left" | "right"
 }

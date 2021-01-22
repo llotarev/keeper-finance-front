@@ -32,10 +32,6 @@
     box-shadow: 0 0 0 4px rgba(var(--color-primery), .2);
 }
 
-.button:invalid {
-    border-color: rgba(var(--color-danger), .4);
-    box-shadow: 0 0 0 4px rgba(var(--color-danger), .2);
-}
 
 /* modify */
 .button--block {

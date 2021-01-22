@@ -15,7 +15,6 @@ function App() {
                 <Button content="left">
                     Текст
                 </Button>
-                <Input content='left' required defaultValue='sds'/>
             </div>
         </Router>
     );

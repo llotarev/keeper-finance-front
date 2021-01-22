@@ -2,7 +2,7 @@ import React, {FC} from "react";
 import cn from "../styles/classNames";
 import './Button.css';
 
-export interface UIKitButtonElement extends React.HTMLAttributes<HTMLButtonElement> {
+export interface UIKitButtonElement extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     block?: boolean,
     content?: "left" | "right"
 }
