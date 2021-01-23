@@ -2,37 +2,33 @@ import React, {useState} from "react";
 import "./Finance.css"
 import {Input} from "../UIKit/Input";
 import {Button} from "../UIKit/Button";
+import {Label} from "../UIKit/Label";
+import {FaBell} from "react-icons/all";
 
 export function Finance() {
 
-    const [font, setFont] = useState("");
 
-    function handleFocus(e: React.FocusEvent<HTMLInputElement>) {
-        setFont("24")
-    }
-
-    function handleBlur(e: React.FocusEvent<HTMLInputElement>) {
-        setFont("18")
-    }
+    const disabled = false;
 
     return (
         <div className="finance">
-            <form action="#">
-                <Input placeholder="Имя"/>
-                <Input type="range" min="14" max="64"
+            <Label>
+                <span>Name</span>
+                <Input placeholder="name"/>
+            </Label>
+            <Label>
+                <span>email*</span>
+                <Input required placeholder="email*"/>
+            </Label>
+            <Label>
+                <span>disabled</span>
+                <Input required placeholder="email*"/>
+            </Label>
 
-                       placeholder="Имя"/>
-                <Input type="tel"
-                       onFocus={handleFocus}
-                       onBlur={handleBlur}
-                       style={{fontSize: font + "px"}} placeholder="Динамический размер"/>
-                <Button>Отправить</Button>
-                <Button variant="link">Отправить</Button>
-            </form>
-            <div className="card">
-                <Input variant="dark" type="tel" placeholder="Сумма"/>
-                <Input variant="dark" disabled type="tel" placeholder="Сумма"/>
-            </div>
+            <Button disabled={disabled}>Текст</Button>
+            <Button disabled={disabled} variant="glass">Текст</Button>
+            <Button disabled={disabled} variant="outline">Текст</Button>
+            <Button disabled={disabled} variant="link">Текст</Button>
         </div>
     )
 }

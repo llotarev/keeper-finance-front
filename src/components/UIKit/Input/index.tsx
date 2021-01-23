@@ -3,7 +3,7 @@ import './style.css'
 import cn from "../styles/classNames";
 
 export interface UIKitInputElement extends InputHTMLAttributes<HTMLInputElement> {
-    variant?: string | "dark"
+    variant?: null
 }
 
 export const Input: FC<UIKitInputElement> = (props) => {
@@ -13,7 +13,6 @@ export const Input: FC<UIKitInputElement> = (props) => {
     return (
         <input className={cn({
             [String(className)]: true,
-            "ui-kit": true,
             "input": true,
             ["input--" + variant]: Boolean(variant)
         })}{...other}/>

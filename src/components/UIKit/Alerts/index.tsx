@@ -3,17 +3,19 @@ import './style.css'
 import cn from "../styles/classNames";
 
 export interface UIKitAlertsElement extends HTMLAttributes<HTMLDivElement> {
+    variant?: "dark",
     controller?: ReactNode;
 }
 
 export const Alerts: FC<UIKitAlertsElement> = (props) => {
 
-    const {children, controller, ...other} = props
+    const {className, children, controller, variant, ...other} = props;
 
     return (
         <div className={cn({
-            "ui-kit": true,
-            "alerts": true
+            [String(className)]: true,
+            "alerts": true,
+            ["alerts--" + variant]: Boolean(variant),
         })}{...other}>
             <div className="alerts__content">
                 {children}

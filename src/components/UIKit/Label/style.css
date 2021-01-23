@@ -1,0 +1,42 @@
+.label {
+    font: normal normal 14px var(--font-primary);
+    background: rgba(var(--color-white), 1);
+    color: rgba(var(--color-dark), .6);
+    border: none;
+    outline: none;
+    appearance: none;
+    margin-bottom: 0.8em;
+
+    /* grid */
+    display: flex;
+    flex-direction: column;
+
+    /* base animation */
+    --transition-duration: .2s;
+
+    transition: opacity ease var(--transition-duration),
+    color ease var(--transition-duration),
+    border ease var(--transition-duration),
+    box-shadow ease var(--transition-duration),
+    background ease var(--transition-duration),
+    font-size ease var(--transition-duration);
+    will-change: opacity,
+    color,
+    border,
+    box-shadow,
+    background,
+    font-size;
+}
+
+.label span,
+.label input {
+    font-size: inherit;
+}
+
+.label span {
+    margin-left: 0.6em;
+    margin-bottom: 0.2em;
+}
+
+/* @State */
+/* [base] */
