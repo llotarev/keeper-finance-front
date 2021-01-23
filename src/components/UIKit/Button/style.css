@@ -12,8 +12,8 @@
     appearance: none;
     border-radius: 0.6em;
 
-    transition: color ease .4s, border ease .4s, box-shadow ease .4s, background ease .4s;
-    will-change: color, border, box-shadow, background;
+    transition: color ease .4s, border ease .4s, box-shadow ease .4s, background ease .4s, font-size ease .4s;
+    will-change: color, border, box-shadow, background, font-size;
 
 }
 
