@@ -1,34 +1,22 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./Finance.css"
-import {Input} from "../UIKit/Input";
-import {Button} from "../UIKit/Button";
-import {Label} from "../UIKit/Label";
-import {FiMinusCircle, FiPlusCircle} from "react-icons/all";
-import {ButtonGroup} from "../UIKit/ButtonGroup";
-import {Textarea} from "../UIKit/Textarea";
+import {AddItem} from "./components/AddItem";
+import {Route, useHistory} from "react-router-dom";
+import {routes} from "../../routes";
 
 export function Finance() {
 
+    const history = useHistory();
+    useEffect(() => {
+        history.push(routes.finance.root)
+    }, [])
+
+
     return (
         <div className="finance">
-            <form>
-                <Label>
-                    <span>Название</span>
-                    <Input name="name" type="tel" placeholder="Введите название"/>
-                </Label>
-                <Label>
-                    <span>Сумма</span>
-                    <Input name="amount" type="tel" placeholder="Введите сумму"/>
-                </Label>
-                <Label>
-                    <span>Описание</span>
-                    <Textarea name="description" resizeable rows={4} placeholder="Введите описание"/>
-                </Label>
-                <ButtonGroup>
-                    <Button color="success" variant="glass"><FiPlusCircle/> Доходы</Button>
-                    <Button color="danger" variant="glass"><FiMinusCircle/> Разходы</Button>
-                </ButtonGroup>
-            </form>
+            <Route path={routes.finance.root}>
+                <AddItem/>
+            </Route>
         </div>
     )
 }
