@@ -3,28 +3,32 @@ import "./Finance.css"
 import {Input} from "../UIKit/Input";
 import {Button} from "../UIKit/Button";
 import {Label} from "../UIKit/Label";
-import {FiLock, FiPhone, FiSave, FiTrash} from "react-icons/all";
+import {FiMinusCircle, FiPlusCircle} from "react-icons/all";
 import {ButtonGroup} from "../UIKit/ButtonGroup";
+import {Textarea} from "../UIKit/Textarea";
 
 export function Finance() {
 
     return (
         <div className="finance">
-            {/*<form>*/}
-            <Label>
-                <span><FiPhone/></span>
-                <Input name="phone" type="tel" placeholder="Номер телефона"/>
-            </Label>
-            <Label>
-                <span><FiLock/></span>
-                <Input name="password" type="password" placeholder="Пароль"/>
-            </Label>
-            <ButtonGroup>
-                <Button color="danger" variant="glass"><FiTrash/> Доходы</Button>
-                <Button color="success" variant="glass"><FiSave/> Разходы</Button>
-            </ButtonGroup>
-            <Button type="submit">Отправить</Button>
-            {/*</form>*/}
+            <form>
+                <Label>
+                    <span>Название</span>
+                    <Input name="name" type="tel" placeholder="Введите название"/>
+                </Label>
+                <Label>
+                    <span>Сумма</span>
+                    <Input name="amount" type="tel" placeholder="Введите сумму"/>
+                </Label>
+                <Label>
+                    <span>Описание</span>
+                    <Textarea name="description" resizeable rows={4} placeholder="Введите описание"/>
+                </Label>
+                <ButtonGroup>
+                    <Button color="success" variant="glass"><FiPlusCircle/> Доходы</Button>
+                    <Button color="danger" variant="glass"><FiMinusCircle/> Разходы</Button>
+                </ButtonGroup>
+            </form>
         </div>
     )
 }

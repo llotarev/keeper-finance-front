@@ -1,0 +1,58 @@
+.textarea {
+    font: normal normal 18px var(--font-primary);
+    background: transparent;
+    color: rgba(var(--color-dark), 1);
+    padding: 0.6em;
+    resize: none;
+    border: none;
+    outline: none;
+    appearance: none;
+    border-radius: 0.6em;
+
+    /* base animation */
+    --transition-duration: .2s;
+
+    transition: opacity ease var(--transition-duration),
+    color ease var(--transition-duration),
+    border ease var(--transition-duration),
+    box-shadow ease var(--transition-duration),
+    background ease var(--transition-duration),
+    font-size ease var(--transition-duration);
+    will-change: opacity,
+    color,
+    border,
+    box-shadow,
+    background,
+    font-size;
+}
+
+/* @State */
+/* [base] */
+.textarea:focus,
+.input:hover {
+    background: rgba(var(--color-primary), .1);
+}
+
+.textarea:invalid {
+    background: rgba(var(--color-danger), .1);
+}
+
+.textarea:invalid::placeholder {
+    color: rgba(var(--color-danger), .4);
+}
+
+.textarea:disabled {
+    background: rgba(var(--color-dark), .1);
+    color: rgba(var(--color-dark), .4);
+    cursor: not-allowed;
+}
+
+.textarea::placeholder {
+    color: rgba(var(--color-primary), .4);
+}
+
+/* @Modify */
+/* [resizeable] */
+.textarea--resizeable {
+    resize: unset;
+}

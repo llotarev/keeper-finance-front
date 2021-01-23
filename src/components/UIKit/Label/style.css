@@ -1,5 +1,5 @@
 .label {
-    font: normal normal 14px var(--font-primary);
+    font: normal normal 18px var(--font-primary);
     color: rgba(var(--color-dark), .6);
     border: none;
     outline: none;
@@ -28,12 +28,12 @@
     font-size;
 }
 
-.label span,
 .label input {
     font-size: inherit;
 }
 
 .label span {
+    font-size: 0.8em;
     margin-left: 0.6em;
     margin-bottom: 0.2em;
 }
