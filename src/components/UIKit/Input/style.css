@@ -18,7 +18,7 @@
 }
 
 .input::placeholder {
-    color: rgba(var(--color-white), 0.04);
+    color: rgba(var(--color-white), 0.2);
 }
 
 /* state */
@@ -33,6 +33,12 @@
     box-shadow: 0 0 0 4px rgba(var(--color-danger), .2);
 }
 
+.input:disabled {
+    border-color: rgba(var(--color-white), .04);
+    background-color: transparent;
+    cursor: not-allowed;
+}
+
 /* modify */
 .input--dark {
     background: rgba(var(--color-dark), .04);
@@ -40,6 +46,12 @@
     color: rgba(var(--color-dark), 1);
 }
 
+.input--dark:disabled {
+    border-color: rgba(var(--color-dark), .04);
+    background-color: transparent;
+    cursor: not-allowed;
+}
+
 .input--dark::placeholder {
-    color: rgba(var(--color-dark), .08);
+    color: rgba(var(--color-dark), .2);
 }

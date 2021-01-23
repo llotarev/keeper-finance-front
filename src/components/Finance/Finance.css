@@ -6,3 +6,10 @@
 .finance form input {
     margin-bottom: 12px;
 }
+
+
+.card {
+    background: rgb(var(--color-white));
+    padding: 12px;
+    border-radius: 12px;
+}
