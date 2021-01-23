@@ -1,7 +1,7 @@
 .input {
     height: 2.6em;
     font: normal normal 18px / 18px var(--font-primary);
-    background: rgba(var(--color-white), 1);
+    background: transparent;
     color: rgba(var(--color-dark), 1);
     padding: 0.6em;
     border: none;

@@ -11,7 +11,7 @@ export function App() {
         <Router>
             <div className='app'>
                 <Route path={routes.root}>
-                    {/*<Header/>*/}
+                    <Header/>
                     <Finance/>
                 </Route>
             </div>

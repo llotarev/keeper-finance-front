@@ -54,8 +54,12 @@
     color: rgba(var(--color-primary), 1);
 }
 
+.button--glass:focus {
+    box-shadow: 0 0 0 0.2em rgba(var(--color-primary), .4);
+}
+
 .button--glass:active {
-    box-shadow: 0 0 0 0.2em rgba(var(--color-primary), .2),
+    box-shadow: 0 0 0 0.2em rgba(var(--color-primary), .4),
     inset 0 0 1.2em rgba(var(--color-primary), .2);
 }
 
@@ -96,4 +100,18 @@
 .button--link:disabled {
     background-color: transparent;
     box-shadow: none;
+}
+
+/* @Set */
+/* [color] */
+.button-color--danger {
+    --color-primary: var(--color-danger);
+}
+
+.button-color--secondary {
+    --color-primary: var(--color-secondary);
+}
+
+.button-color--success {
+    --color-primary: var(--color-success);
 }

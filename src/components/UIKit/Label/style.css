@@ -1,11 +1,11 @@
 .label {
     font: normal normal 14px var(--font-primary);
-    background: rgba(var(--color-white), 1);
     color: rgba(var(--color-dark), .6);
     border: none;
     outline: none;
     appearance: none;
     margin-bottom: 0.8em;
+    border-radius: 0.6em;
 
     /* grid */
     display: flex;

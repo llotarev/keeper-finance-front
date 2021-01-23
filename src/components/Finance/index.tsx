@@ -1,34 +1,30 @@
-import React, {useState} from "react";
+import React from "react";
 import "./Finance.css"
 import {Input} from "../UIKit/Input";
 import {Button} from "../UIKit/Button";
 import {Label} from "../UIKit/Label";
-import {FaBell} from "react-icons/all";
+import {FiLock, FiPhone, FiSave, FiTrash} from "react-icons/all";
+import {ButtonGroup} from "../UIKit/ButtonGroup";
 
 export function Finance() {
 
-
-    const disabled = false;
-
     return (
         <div className="finance">
+            {/*<form>*/}
             <Label>
-                <span>Name</span>
-                <Input placeholder="name"/>
+                <span><FiPhone/></span>
+                <Input name="phone" type="tel" placeholder="Номер телефона"/>
             </Label>
             <Label>
-                <span>email*</span>
-                <Input required placeholder="email*"/>
+                <span><FiLock/></span>
+                <Input name="password" type="password" placeholder="Пароль"/>
             </Label>
-            <Label>
-                <span>disabled</span>
-                <Input required placeholder="email*"/>
-            </Label>
-
-            <Button disabled={disabled}>Текст</Button>
-            <Button disabled={disabled} variant="glass">Текст</Button>
-            <Button disabled={disabled} variant="outline">Текст</Button>
-            <Button disabled={disabled} variant="link">Текст</Button>
+            <ButtonGroup>
+                <Button color="danger" variant="glass"><FiTrash/> Доходы</Button>
+                <Button color="success" variant="glass"><FiSave/> Разходы</Button>
+            </ButtonGroup>
+            <Button type="submit">Отправить</Button>
+            {/*</form>*/}
         </div>
     )
 }
