@@ -1,7 +1,38 @@
 .finance {
     padding: 20px 40px 40px;
-    background: rgba(var(--color-dark), 0.02);
+    background: rgba(var(--color-white), 1);
     border-radius: 12px 12px 0 0;
 }
 
 
+.finance-list {
+    list-style: none;
+    background: rgba(var(--color-dark), 1)
+
+}
+
+
+.finance-list li {
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(var(--color-dark), .05);
+    background: rgba(var(--color-white), 1);
+    user-select: none;
+}
+
+.finance-list li span:nth-child(2) {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 16px;
+    column-gap: 10px;
+}
+
+.finance-list li span:nth-child(2).spending {
+    color: rgba(var(--color-danger));
+}
+
+.finance-list li span:nth-child(2).income {
+    color: rgba(var(--color-success));
+}
