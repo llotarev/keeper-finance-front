@@ -1,9 +1,10 @@
 import React, {ButtonHTMLAttributes, FC} from "react";
 import './style.css'
 import cn from "../styles/classNames";
+import {UIKitColorsType} from "../UIKitTypes";
 
 export interface UIKitButtonElement extends ButtonHTMLAttributes<HTMLButtonElement> {
-    color?: "danger" | "success" | "secondary"
+    color?: UIKitColorsType
     variant?: "link" | "outline" | "glass"
 }
 

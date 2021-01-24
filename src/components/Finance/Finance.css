@@ -7,7 +7,7 @@
 
 .finance-list {
     list-style: none;
-    background: rgba(var(--color-dark), 1)
+    /*background: rgba(var(--color-dark), 1)*/
 
 }
 
@@ -15,18 +15,26 @@
 .finance-list li {
     padding: 16px 0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: flex-end;
     border-bottom: 1px solid rgba(var(--color-dark), .05);
     background: rgba(var(--color-white), 1);
     user-select: none;
+    position: relative;
 }
 
-.finance-list li span:nth-child(2) {
-    display: grid;
+.finance-list li .finance-list__controller {
+    display: flex;
+}
+
+.finance-list li .finance-list__controller button {
+    margin-left: 10px;
+}
+
+.finance-list li .finance-list__item {
+    display: flex;
     align-items: center;
-    grid-template-columns: auto 16px;
-    column-gap: 10px;
+    justify-content: space-between;
 }
 
 .finance-list li span:nth-child(2).spending {

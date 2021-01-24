@@ -104,6 +104,14 @@
 
 /* @Set */
 /* [color] */
+.button-color--info {
+    --color-primary: var(--color-info);
+}
+
+.button-color--warning {
+    --color-primary: var(--color-warning);
+}
+
 .button-color--danger {
     --color-primary: var(--color-danger);
 }
