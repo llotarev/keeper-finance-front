@@ -7,8 +7,6 @@
 
 .finance-list {
     list-style: none;
-    /*background: rgba(var(--color-dark), 1)*/
-
 }
 
 
@@ -37,10 +35,10 @@
     justify-content: space-between;
 }
 
-.finance-list li span:nth-child(2).spending {
+.finance-list .finance-list__item span:nth-child(2).spending {
     color: rgba(var(--color-danger));
 }
 
-.finance-list li span:nth-child(2).income {
+.finance-list .finance-list__item span:nth-child(2).income {
     color: rgba(var(--color-success));
 }

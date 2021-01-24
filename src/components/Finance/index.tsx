@@ -27,22 +27,13 @@ export function Finance() {
                 <ul className="finance-list">
                     <li>
                         <animated.div style={swipe} {...touch()} className="finance-list__item">
-                            <span>Разходы на пасуду</span>
+                            <span>example</span>
                             <span className="spending">100<FiMinusCircle/></span>
                         </animated.div>
                         <div className="finance-list__controller">
-                            <Button variant="link"><FiEdit/></Button>
-                            <Button variant="link" color="secondary"><FiTrash/></Button>
+                            <Button variant="glass"><FiEdit/></Button>
+                            <Button variant="glass" color="danger"><FiTrash/></Button>
                         </div>
-                    </li>
-                    <li>
-                        <span>
-                            Доход на пасуду
-                        </span>
-                        <span className="income">
-                            100
-                        <FiMinusCircle/>
-                        </span>
                     </li>
                 </ul>
 

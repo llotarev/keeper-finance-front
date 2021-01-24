@@ -1,16 +1,15 @@
 .ui-kit {
-    --color-primary: 21, 75, 207;
-    --color-secondary: 109, 83, 212;
+    --color-primary: 74, 171, 232;
+    --color-secondary: 66, 82, 245;
     --color-dark: 0, 0, 0;
     --color-white: 255, 255, 255;
-    --color-info: 46, 217, 217;
-    --color-danger: 203, 47, 64;
-    --color-warning: 219, 196, 126;
-    --color-success: 126, 219, 127;
-    --color-gray: 88, 86, 86;
+    --color-info: 45, 127, 179;
+    --color-danger: 255, 77, 77;
+    --color-warning: 252, 218, 86;
+    --color-success: 48, 217, 198;
 
     --font-primary: 'Ubuntu', sans-serif;
 
 
-    /*color: rgb(46, 217, 217);*/
+    /*color: rgb(45, 127, 179);*/
 }
