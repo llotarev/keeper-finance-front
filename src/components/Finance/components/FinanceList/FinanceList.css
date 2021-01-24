@@ -1,0 +1,90 @@
+.list {
+    list-style: none;
+}
+
+.list__item {
+    position: relative;
+    overflow: hidden;
+}
+
+/* [container] */
+.list__item__container {
+    background: rgba(var(--color-white), 1);
+    font: normal normal 20px var(--font-primary);
+    border-bottom: 0.05em solid rgba(var(--color-dark), .1);
+    height: inherit;
+    padding: 0.6em 0.4em;
+    user-select: none;
+
+    /*transform: translateX(-80px);*/
+
+    /* grid */
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+
+}
+
+.list__item__container aside:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.list__item__container aside:nth-child(1) .date {
+    font-size: 0.6em;
+    color: rgba(var(--color-dark), .5);
+}
+
+.list__item__container aside:nth-child(2) {
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.list__item__container aside:nth-child(2) .amount {
+    margin-right: 0.6em;
+}
+
+.list__item__container aside:nth-child(2) svg {
+    font-size: 0.8em;
+}
+
+
+/* [more] */
+.list__item__more {
+    background: rgba(var(--color-dark), 0.05);
+    border-radius: 0 0 0.6em 0.6em;
+    padding: 0.6em 0.4em;
+    user-select: none;
+}
+
+.list__item__more header {
+    font-size: 1em;
+}
+
+.list__item__more p {
+    font-size: 0.8em;
+    color: rgba(var(--color-dark), 0.6);
+}
+
+/* [controller] */
+.list__item__controller {
+    /*transform: translateX(80px);*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+}
+
+.list__item__controller button {
+    height: inherit;
+    border-radius: 0;
+}

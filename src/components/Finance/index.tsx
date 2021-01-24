@@ -2,10 +2,12 @@ import React, {useEffect} from "react";
 import "./Finance.css"
 import {Route, useHistory} from "react-router-dom";
 import {routes} from "../../routes";
-import {FiEdit, FiMinusCircle, FiTrash} from "react-icons/all";
 import {useDrag} from "react-use-gesture";
-import {animated, useSpring} from "react-spring";
-import {Button} from "../UIKit/Button";
+import {useSpring} from "react-spring";
+import {FiMinusCircle} from "react-icons/all";
+import {AddItem} from "./components/AddItem";
+import {FinanceList} from "./components/FinanceList";
+
 
 export function Finance() {
 
@@ -24,19 +26,7 @@ export function Finance() {
     return (
         <div className="finance">
             <Route path={routes.finance.root}>
-                <ul className="finance-list">
-                    <li>
-                        <animated.div style={swipe} {...touch()} className="finance-list__item">
-                            <span>example</span>
-                            <span className="spending">100<FiMinusCircle/></span>
-                        </animated.div>
-                        <div className="finance-list__controller">
-                            <Button variant="glass"><FiEdit/></Button>
-                            <Button variant="glass" color="danger"><FiTrash/></Button>
-                        </div>
-                    </li>
-                </ul>
-
+                <FinanceList/>
                 {/*<AddItem/>*/}
             </Route>
         </div>
