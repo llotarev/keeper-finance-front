@@ -16,27 +16,28 @@ export const FinanceList: FC<AppComponentList> = (props) => {
     const {children} = props;
 
     const [more, setMore] = useState<boolean>(false);
-
-    const [propsController, setController] = useSpring(() => ({transform: 'translateX(80px)'}))
+    const [propsController, setController] = useSpring(() => ({transform: 'translateX(116px)'}))
     const [propsContainer, setContainer] = useSpring(() => ({transform: 'translateX(0px)'}))
 
     const touch = useDrag(({down, movement: [mx]}) => {
 
-        if (down && mx > 80) {
-            console.log(mx)
-            // setController({transform: `translateX(${mx}px)`})
-            // setContainer({transform: `translateX(${mx}px)`})
+
+        const [x, size]: number[] = [Math.floor(mx), 116];
+
+        if (x >= -size && x <= 0) {
+            setController({transform: `translateX(${x + size}px)`})
+            setContainer({transform: `translateX(${x}px)`})
         }
-
-
     })
 
     return (
         <ul className="list">
             {/*{children.map((item) => (*/}
-            <li className="list__item">
-                <animated.div className="list__item__container" {...touch()} style={propsContainer}>
-                    <aside onClick={() => setMore(prevState => !prevState)}>
+            <li className="list__item" {...touch()}>
+                <animated.div className="list__item__container" style={propsContainer}>
+                    <aside
+                        onClick={() => setMore(prevState => !prevState)}
+                    >
                         <span className="name">Header</span>
                         <span className="date">01.01.2020</span>
                     </aside>

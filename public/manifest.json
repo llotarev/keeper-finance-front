@@ -1,6 +1,6 @@
 {
-  "short_name": "Cyndyk",
-  "name": "Cyndyk",
+  "short_name": "Keeper Finance",
+  "name": "Keeper Finance",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#db42c6",
+  "theme_color": "#ffffff",
   "background_color": "#ffffff"
 }
