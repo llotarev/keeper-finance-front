@@ -4,6 +4,7 @@ import {FiEdit, FiMinusCircle, FiPlusCircle, FiTrash} from "react-icons/all";
 import {UIKit} from "../../../UIKit";
 import {useDrag} from "react-use-gesture";
 import {useSpring, animated} from "react-spring";
+import {log} from "util";
 
 const {Button} = UIKit;
 
@@ -58,8 +59,8 @@ export const FinanceList: FC<AppComponentList> = (props) => {
                     </div>
                 )}
                 <animated.div className="list__item__controller" style={propsController}>
-                    <Button variant="glass"><FiEdit/></Button>
-                    <Button variant="glass" color="danger"><FiTrash/></Button>
+                    <Button variant="glass" onClick={() => alert("Edit")}><FiEdit/></Button>
+                    <Button variant="glass" color="danger" onClick={() => alert("Trash")}><FiTrash/></Button>
                 </animated.div>
             </li>
             {/*))}*/}
