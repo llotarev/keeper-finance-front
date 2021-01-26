@@ -13,15 +13,6 @@ export function App() {
             <div className='app'>
                 <Route path={routes.root}>
                     <Header/>
-                    <div style={{
-                        display: 'flex',
-                        justifyContent: 'space-around'
-                    }}>
-                        <Button variant="link">all</Button>
-                        <Button variant="glass">spending</Button>
-                        <Button variant="link">income</Button>
-                    </div>
-
                     <Finance/>
                 </Route>
             </div>

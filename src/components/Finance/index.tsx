@@ -1,12 +1,10 @@
 import React, {useEffect} from "react";
-import "./Finance.css"
+import "./style.css"
 import {Route, useHistory} from "react-router-dom";
 import {routes} from "../../routes";
-import {useDrag} from "react-use-gesture";
-import {useSpring} from "react-spring";
-import {FiMinusCircle} from "react-icons/all";
-import {AddItem} from "./components/AddItem";
+import {Filter} from "./components/Filter";
 import {FinanceList} from "./components/FinanceList";
+import {FinanceListItem} from "./components/FinanceListItem";
 
 
 export function Finance() {
@@ -16,18 +14,16 @@ export function Finance() {
         history.push(routes.finance.root)
     }, [])
 
-    const [swipe, setSwipe] = useSpring(() => ({transform: 'translateX(0px)'}))
-    const touch = useDrag(({down, movement: [mx]}) => {
-        if (mx <= 0 && down) {
-            setSwipe({transform: `translateX(${mx}px)`});
-        }
-    })
-
     return (
         <div className="finance">
             <Route path={routes.finance.root}>
-                <FinanceList/>
-                {/*<AddItem/>*/}
+                <Filter/>
+            </Route>
+            <Route exact path={routes.finance.root}>
+                <FinanceList>
+                    <FinanceListItem/>
+                    <FinanceListItem/>
+                </FinanceList>
             </Route>
         </div>
     )

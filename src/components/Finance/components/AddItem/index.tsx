@@ -1,4 +1,5 @@
 import React from "react";
+import './style.css'
 import {UIKit} from "../../../UIKit";
 import {FiMinusCircle, FiPlusCircle} from "react-icons/all";
 

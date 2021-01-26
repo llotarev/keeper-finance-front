@@ -29,7 +29,7 @@
 /* @State */
 /* [base] */
 .button:hover {
-    opacity: 80%;
+    opacity: .8;
 }
 
 .button:focus {
