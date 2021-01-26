@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/keeper-finance-front/static/css/main.be5f4eec.chunk.css",
-    "main.js": "/keeper-finance-front/static/js/main.13a54a2d.chunk.js",
-    "main.js.map": "/keeper-finance-front/static/js/main.13a54a2d.chunk.js.map",
-    "runtime-main.js": "/keeper-finance-front/static/js/runtime-main.c26c191b.js",
-    "runtime-main.js.map": "/keeper-finance-front/static/js/runtime-main.c26c191b.js.map",
-    "static/js/2.a124d373.chunk.js": "/keeper-finance-front/static/js/2.a124d373.chunk.js",
-    "static/js/2.a124d373.chunk.js.map": "/keeper-finance-front/static/js/2.a124d373.chunk.js.map",
-    "static/js/3.3e3b527b.chunk.js": "/keeper-finance-front/static/js/3.3e3b527b.chunk.js",
-    "static/js/3.3e3b527b.chunk.js.map": "/keeper-finance-front/static/js/3.3e3b527b.chunk.js.map",
+    "main.css": "/keeper-finance-front/static/css/main.60d41ba4.chunk.css",
+    "main.js": "/keeper-finance-front/static/js/main.bee07dfc.chunk.js",
+    "main.js.map": "/keeper-finance-front/static/js/main.bee07dfc.chunk.js.map",
+    "runtime-main.js": "/keeper-finance-front/static/js/runtime-main.b6868b82.js",
+    "runtime-main.js.map": "/keeper-finance-front/static/js/runtime-main.b6868b82.js.map",
+    "static/js/2.2db554bd.chunk.js": "/keeper-finance-front/static/js/2.2db554bd.chunk.js",
+    "static/js/2.2db554bd.chunk.js.map": "/keeper-finance-front/static/js/2.2db554bd.chunk.js.map",
+    "static/js/3.c2ae7d7a.chunk.js": "/keeper-finance-front/static/js/3.c2ae7d7a.chunk.js",
+    "static/js/3.c2ae7d7a.chunk.js.map": "/keeper-finance-front/static/js/3.c2ae7d7a.chunk.js.map",
     "index.html": "/keeper-finance-front/index.html",
-    "static/css/main.be5f4eec.chunk.css.map": "/keeper-finance-front/static/css/main.be5f4eec.chunk.css.map",
-    "static/js/2.a124d373.chunk.js.LICENSE.txt": "/keeper-finance-front/static/js/2.a124d373.chunk.js.LICENSE.txt"
+    "static/css/main.60d41ba4.chunk.css.map": "/keeper-finance-front/static/css/main.60d41ba4.chunk.css.map",
+    "static/js/2.2db554bd.chunk.js.LICENSE.txt": "/keeper-finance-front/static/js/2.2db554bd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c26c191b.js",
-    "static/js/2.a124d373.chunk.js",
-    "static/css/main.be5f4eec.chunk.css",
-    "static/js/main.13a54a2d.chunk.js"
+    "static/js/runtime-main.b6868b82.js",
+    "static/js/2.2db554bd.chunk.js",
+    "static/css/main.60d41ba4.chunk.css",
+    "static/js/main.bee07dfc.chunk.js"
   ]
 }
