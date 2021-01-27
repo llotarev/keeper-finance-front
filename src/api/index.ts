@@ -13,10 +13,10 @@ export const Responses = async (response: any): Promise<AxiosResponse> => {
 export interface IFinance {
     name: string,
     amount: number
-    description: string
-    finance_type: "income" | "spending",
-    create_date: string
     user_id: number
+    description: string
+    create_date: string
+    finance_type: string | "income" | "spending",
 }
 
 export interface IFinanceUpdate extends IFinance {

@@ -1,11 +1,12 @@
 import React, {useState} from "react";
 import './style.css'
+import {useHistory, useParams} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import {createSelector} from "reselect";
 import {UIKit} from "../../../UIKit";
+import {FiArrowLeft, FiSave} from "react-icons/all";
+import {financeReducerSelectors, financeReducerThunk} from "../../../../store/reducer/finance";
 import {routes} from "../../../../routes";
-import {financeReducerThunk} from "../../../../store/reducer/finance";
-import {FiArrowLeft, FiMinusCircle, FiPlusCircle} from "react-icons/all";
-import {useHistory} from "react-router-dom";
-import {useDispatch} from "react-redux";
 
 const {
     Label,
@@ -15,22 +16,32 @@ const {
     ButtonGroup,
 } = UIKit;
 
-export function AddItem() {
 
-    const {create} = financeReducerThunk();
+export function EditItem() {
 
-    const history = useHistory();
+    const {update} = financeReducerThunk();
+
+    const financeOne = createSelector(
+        financeReducerSelectors.getFinance,
+        items => items.find(({id}) => id == query.id)
+    )
+
+    const history = useHistory()
+    const query: any = useParams();
     const dispatch = useDispatch();
+    const {
+        id,
+        name,
+        amount,
+        description,
+        ...other
+    }: any = useSelector(financeOne);
 
-    function handleCancel(e: React.MouseEvent<HTMLButtonElement>) {
-        e.preventDefault();
-        history.push(routes.finance.root)
-    }
 
-    const [form, setForm] = useState({
-        name: "",
-        amount: "",
-        description: ""
+    const [form, setForm] = useState<object>({
+        name,
+        amount,
+        description
     })
 
     function handleChange(e: React.ChangeEvent<HTMLFormElement>) {
@@ -40,17 +51,19 @@ export function AddItem() {
         }))
     }
 
-    function handleAdd(e: React.MouseEvent<HTMLButtonElement | any>) {
+    function handleCancel() {
+        history.push(routes.finance.root)
+    }
+
+    function handleEdit(e: React.MouseEvent<HTMLButtonElement>) {
         e.preventDefault();
-        dispatch(create({
-            name: form.name,
-            amount: Number(form.amount),
-            description: form.description,
-            finance_type: e.currentTarget.id,
-            create_date: new Date().toDateString(),
-            user_id: 1,
+        dispatch(update({
+            ...form,
+            ...other,
+            finance_id: id,
         }))
     }
+
 
     //@TODO добавить поле Date для создание будущих или прошлых финансовых операций
 
@@ -61,6 +74,7 @@ export function AddItem() {
                 <Input
                     name="name"
                     type="text"
+                    defaultValue={name}
                     placeholder="Введите название"
                 />
             </Label>
@@ -69,6 +83,7 @@ export function AddItem() {
                 <Input
                     name="amount"
                     type="tel"
+                    defaultValue={amount}
                     placeholder="Введите сумму"
                 />
             </Label>
@@ -76,17 +91,18 @@ export function AddItem() {
                 <span>Описание</span>
                 <Textarea
                     name="description"
-                    resizeable rows={4}
+                    resizeable
+                    rows={4}
+                    defaultValue={description}
                     placeholder="Введите описание"
                 />
             </Label>
             <ButtonGroup>
-                <Button onClick={handleCancel}><FiArrowLeft/> Отмена</Button>
-                <Button color="success" id="income" onClick={handleAdd}>
-                    <FiPlusCircle/> Доходы
+                <Button color="danger" onClick={handleCancel}>
+                    <FiArrowLeft/> Отмена
                 </Button>
-                <Button color="danger" id="spending" onClick={handleAdd}>
-                    <FiMinusCircle/> Разходы
+                <Button onClick={handleEdit}>
+                    <FiSave/> Сохранить
                 </Button>
             </ButtonGroup>
         </form>

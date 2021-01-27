@@ -12,6 +12,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+    z-index: var(--layers-5);
 
 
     /* grid */
