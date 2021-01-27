@@ -1,7 +1,25 @@
-body {
-    /*background: rgb(var(--color-dark));*/
-}
-
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+/*!* @Theme *!*/
+/*body {*/
+/*    background: rgb(var(--color-dark));*/
+/*}*/
+
+
+/*!*[finance]*!*/
+/*.finance,*/
+/*.finance-list__item__container {*/
+/*    background: rgb(var(--color-dark));*/
+/*    color: rgb(var(--color-white));*/
+/*}*/
+
+/*.finance-list__item__container aside:nth-child(1) .date {*/
+/*    color: rgba(var(--color-white), 0.5);*/
+/*}*/
+
+/*.finance-list__item__more {*/
+/*    background: rgba(var(--color-white), 0.05);*/
+/*}*/
+

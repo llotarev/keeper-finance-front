@@ -2,6 +2,7 @@ import {Dispatch} from "react";
 import {StateType} from "../../index";
 import {Finance, IFinance, IFinanceUpdate} from "../../../api";
 import {financeReducerActions} from "./index";
+import {uiReducerActions} from "../ui";
 
 export function financeThunk() {
 
@@ -10,26 +11,33 @@ export function financeThunk() {
 
             const response = await Finance.get();
 
-            switch (response.status) {
-                case 200:
-                    dispatch(financeReducerActions.setFinance({
-                        finance: response.data
-                    }))
-                    break;
-                case 201:
-                    break;
-                case 204:
-                    break;
-                case 400:
-                    break;
-                case 401:
-                    break;
-                case 404:
-                    break
-                case 500:
-                    break
-                default:
-                    break;
+            try {
+                switch (response.status) {
+                    case 200:
+                        dispatch(financeReducerActions.setFinance({
+                            finance: response.data
+                        }))
+                        break;
+                    case 201:
+                        break;
+                    case 204:
+                        break;
+                    case 400:
+                        break;
+                    case 401:
+                        break;
+                    case 404:
+                        break
+                    case 500:
+                        break
+                    default:
+                        break;
+                }
+            } catch (e) {
+                dispatch(uiReducerActions.setMessages({
+                    type: "danger",
+                    text: String(e)
+                }))
             }
         }
     }
@@ -40,26 +48,33 @@ export function financeThunk() {
             const {finance} = getState().financeReducer;
             const response = await Finance.create(props);
 
-            switch (response.status) {
-                case 200:
-                    dispatch(financeReducerActions.setFinance({
-                        finance: [...response.data, ...finance]
-                    }))
-                    break;
-                case 201:
-                    break;
-                case 204:
-                    break;
-                case 400:
-                    break;
-                case 401:
-                    break;
-                case 404:
-                    break
-                case 500:
-                    break
-                default:
-                    break;
+            try {
+                switch (response.status) {
+                    case 200:
+                        dispatch(financeReducerActions.setFinance({
+                            finance: [...response.data, ...finance]
+                        }))
+                        break;
+                    case 201:
+                        break;
+                    case 204:
+                        break;
+                    case 400:
+                        break;
+                    case 401:
+                        break;
+                    case 404:
+                        break
+                    case 500:
+                        break
+                    default:
+                        break;
+                }
+            } catch (e) {
+                dispatch(uiReducerActions.setMessages({
+                    type: "danger",
+                    text: JSON.stringify(e)
+                }))
             }
         }
     }
@@ -71,28 +86,35 @@ export function financeThunk() {
             const {finance} = getState().financeReducer;
             const response = await Finance.del(finance_id);
 
-            switch (response.status) {
-                case 200:
-                    dispatch(financeReducerActions.setFinance({
-                        finance: finance.filter((item) => (
-                            item.id !== response.data[0].id
-                        ))
-                    }))
-                    break;
-                case 201:
-                    break;
-                case 204:
-                    break;
-                case 400:
-                    break;
-                case 401:
-                    break;
-                case 404:
-                    break
-                case 500:
-                    break
-                default:
-                    break;
+            try {
+                switch (response.status) {
+                    case 200:
+                        dispatch(financeReducerActions.setFinance({
+                            finance: finance.filter((item) => (
+                                item.id !== response.data[0].id
+                            ))
+                        }))
+                        break;
+                    case 201:
+                        break;
+                    case 204:
+                        break;
+                    case 400:
+                        break;
+                    case 401:
+                        break;
+                    case 404:
+                        break
+                    case 500:
+                        break
+                    default:
+                        break;
+                }
+            } catch (e) {
+                dispatch(uiReducerActions.setMessages({
+                    type: "danger",
+                    text: JSON.stringify(e)
+                }))
             }
         }
     }
@@ -103,29 +125,36 @@ export function financeThunk() {
             const {finance} = getState().financeReducer;
             const response = await Finance.update(props);
 
-            switch (response.status) {
-                case 200:
-                    dispatch(financeReducerActions.setFinance({
-                        finance: [
-                            finance.filter((item) => item.id !== props.finance_id),
-                            ...response.data
-                        ]
-                    }))
-                    break;
-                case 201:
-                    break;
-                case 204:
-                    break;
-                case 400:
-                    break;
-                case 401:
-                    break;
-                case 404:
-                    break
-                case 500:
-                    break
-                default:
-                    break;
+            try {
+                switch (response.status) {
+                    case 200:
+                        dispatch(financeReducerActions.setFinance({
+                            finance: [
+                                finance.filter((item) => item.id !== props.finance_id),
+                                ...response.data
+                            ]
+                        }))
+                        break;
+                    case 201:
+                        break;
+                    case 204:
+                        break;
+                    case 400:
+                        break;
+                    case 401:
+                        break;
+                    case 404:
+                        break
+                    case 500:
+                        break
+                    default:
+                        break;
+                }
+            } catch (e) {
+                dispatch(uiReducerActions.setMessages({
+                    type: "danger",
+                    text: JSON.stringify(e)
+                }))
             }
         }
     }

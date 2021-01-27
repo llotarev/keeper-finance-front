@@ -3,7 +3,7 @@ import {financeThunk} from "./thunk";
 import {StateType} from "../../index";
 import {IFinance} from "../../../api";
 
-interface IFinanceItem extends IFinance {
+export interface IFinanceItem extends IFinance {
     id: number
 }
 
