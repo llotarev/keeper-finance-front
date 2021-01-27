@@ -9,6 +9,7 @@ export const Responses = async (response: any): Promise<AxiosResponse> => {
     }
 }
 
+export type FinanceType = "income" | "spending";
 
 export interface IFinance {
     name: string,
@@ -16,7 +17,7 @@ export interface IFinance {
     user_id: number
     description: string
     create_date: string
-    finance_type: string | "income" | "spending",
+    finance_type: string | FinanceType,
 }
 
 export interface IFinanceUpdate extends IFinance {

@@ -14,9 +14,11 @@ export function List() {
 
     const {get, del} = financeReducerThunk();
 
+
     const history = useHistory();
     const dispatch = useDispatch();
-    const finance = useSelector(financeReducerSelectors.getFinance);
+    const filter = useSelector(financeReducerSelectors.getFilter);
+    const finance = useSelector(financeReducerSelectors.getFinanceFilter(filter));
 
     /* @Effects */
     useEffect(() => {

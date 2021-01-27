@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import './style.css'
 import {useHistory, useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {createSelector} from "reselect";
+import {createSelector} from "@reduxjs/toolkit";
 import {UIKit} from "../../../UIKit";
 import {FiArrowLeft, FiSave} from "react-icons/all";
 import {financeReducerSelectors, financeReducerThunk} from "../../../../store/reducer/finance";
@@ -37,6 +37,11 @@ export function EditItem() {
         ...other
     }: any = useSelector(financeOne);
 
+
+    console.log(
+        //@FIXME
+        // financeReducerSelectors.getFinanceOne(43)
+    )
 
     const [form, setForm] = useState<object>({
         name,
