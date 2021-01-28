@@ -1,4 +1,4 @@
-import React, {FC, LiHTMLAttributes, useLayoutEffect, useRef, useState} from "react";
+import React, {FC, LiHTMLAttributes, useRef, useState} from "react";
 import './style.css'
 import {FiEdit, FiMinusCircle, FiPlusCircle, FiTrash} from "react-icons/all";
 import {UIKit} from "../../../UIKit";
@@ -67,7 +67,7 @@ export const FinanceListItem: FC<AppComponentListItem & IFinance> = (props) => {
                     <span className="date">{create_date}</span>
                 </aside>
                 <aside style={{color: financeTypeColor[finance_type]}}>
-                    <span className="amount">{amount}</span>
+                    <span className="amount">{amount} руб.</span>
                     <span className="status">{financeTypeIcon[finance_type]}</span>
                 </aside>
             </animated.div>
