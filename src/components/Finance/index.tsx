@@ -26,9 +26,7 @@ export function Finance() {
         <div className="finance">
             <Route path={routes.finance.root}>
                 <Filter/>
-                {Boolean(messages.text) && (
-                    <Alerts>{messages.text}</Alerts>
-                )}
+                {Boolean(messages.text) && <Alerts>{messages.text}</Alerts>}
             </Route>
             <Route exact path={routes.finance.root}>
                 <List/>
