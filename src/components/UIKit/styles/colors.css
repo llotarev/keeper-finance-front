@@ -1,0 +1,103 @@
+
+:root {
+    --color-primary-hsl: 210deg 100%;
+    --color-primary-10: hsl(var(--color-primary-hsl) 10% / 100%);
+    --color-primary-20: hsl(var(--color-primary-hsl) 20% / 100%);
+    --color-primary-30: hsl(var(--color-primary-hsl) 30% / 100%);
+    --color-primary-40: hsl(var(--color-primary-hsl) 40% / 100%);
+    --color-primary: hsl(var(--color-primary-hsl) 50% / 100%);
+    --color-primary-60: hsl(var(--color-primary-hsl) 60% / 100%);
+    --color-primary-70: hsl(var(--color-primary-hsl) 70% / 100%);
+    --color-primary-80: hsl(var(--color-primary-hsl) 80% / 100%);
+    --color-primary-90: hsl(var(--color-primary-hsl) 90% / 100%);
+
+    --color-secondary-hsl: 285deg 100%;
+    --color-secondary-10: hsl(var(--color-secondary-hsl) 10% / 100%);
+    --color-secondary-20: hsl(var(--color-secondary-hsl) 20% / 100%);
+    --color-secondary-30: hsl(var(--color-secondary-hsl) 30% / 100%);
+    --color-secondary-40: hsl(var(--color-secondary-hsl) 40% / 100%);
+    --color-secondary: hsl(var(--color-secondary-hsl) 50% /100%);
+    --color-secondary-60: hsl(var(--color-secondary-hsl) 60% / 100%);
+    --color-secondary-70: hsl(var(--color-secondary-hsl) 70% / 100%);
+    --color-secondary-80: hsl(var(--color-secondary-hsl) 80% / 100%);
+    --color-secondary-90: hsl(var(--color-secondary-hsl) 90% / 100%);
+
+    --color-info-hsl: 195deg 100%;
+    --color-info-10: hsl(var(--color-info-hsl) 10% / 100%);
+    --color-info-20: hsl(var(--color-info-hsl) 20% / 100%);
+    --color-info-30: hsl(var(--color-info-hsl) 30% / 100%);
+    --color-info-40: hsl(var(--color-info-hsl) 40% / 100%);
+    --color-info: hsl(var(--color-info-hsl) 50% /100%);
+    --color-info-60: hsl(var(--color-info-hsl) 60% / 100%);
+    --color-info-70: hsl(var(--color-info-hsl) 70% / 100%);
+    --color-info-80: hsl(var(--color-info-hsl) 80% / 100%);
+    --color-info-90: hsl(var(--color-info-hsl) 90% / 100%);
+
+    --color-success-hsl: 160deg 100%;
+    --color-success-10: hsl(var(--color-success-hsl) 10% / 100%);
+    --color-success-20: hsl(var(--color-success-hsl) 20% / 100%);
+    --color-success-30: hsl(var(--color-success-hsl) 30% / 100%);
+    --color-success-40: hsl(var(--color-success-hsl) 40% / 100%);
+    --color-success: hsl(var(--color-success-hsl) 50% /100%);
+    --color-success-60: hsl(var(--color-success-hsl) 60% / 100%);
+    --color-success-70: hsl(var(--color-success-hsl) 70% / 100%);
+    --color-success-80: hsl(var(--color-success-hsl) 80% / 100%);
+    --color-success-90: hsl(var(--color-success-hsl) 90% / 100%);
+
+    --color-warning-hsl: 40deg 100%;
+    --color-warning-10: hsl(var(--color-warning-hsl) 10% / 100%);
+    --color-warning-20: hsl(var(--color-warning-hsl) 20% / 100%);
+    --color-warning-30: hsl(var(--color-warning-hsl) 30% / 100%);
+    --color-warning-40: hsl(var(--color-warning-hsl) 40% / 100%);
+    --color-warning: hsl(var(--color-warning-hsl) 50% /100%);
+    --color-warning-60: hsl(var(--color-warning-hsl) 60% / 100%);
+    --color-warning-70: hsl(var(--color-warning-hsl) 70% / 100%);
+    --color-warning-80: hsl(var(--color-warning-hsl) 80% / 100%);
+    --color-warning-90: hsl(var(--color-warning-hsl) 90% / 100%);
+
+    --color-danger-hsl: 350deg 100%;
+    --color-danger-10: hsl(var(--color-danger-hsl) 10% / 100%);
+    --color-danger-20: hsl(var(--color-danger-hsl) 20% / 100%);
+    --color-danger-30: hsl(var(--color-danger-hsl) 30% / 100%);
+    --color-danger-40: hsl(var(--color-danger-hsl) 40% / 100%);
+    --color-danger: hsl(var(--color-danger-hsl) 50% /100%);
+    --color-danger-60: hsl(var(--color-danger-hsl) 60% / 100%);
+    --color-danger-70: hsl(var(--color-danger-hsl) 70% / 100%);
+    --color-danger-80: hsl(var(--color-danger-hsl) 80% / 100%);
+    --color-danger-90: hsl(var(--color-danger-hsl) 90% / 100%);
+
+    --color-dark-hsl: 0deg 0%;
+    --color-dark: hsl(var(--color-dark-hsl) 0% / 100%);
+    --color-dark-alpha-90: hsl(var(--color-dark-hsl) 0% / 90%);
+    --color-dark-alpha-80: hsl(var(--color-dark-hsl) 0% / 80%);
+    --color-dark-alpha-70: hsl(var(--color-dark-hsl) 0% / 70%);
+    --color-dark-alpha-60: hsl(var(--color-dark-hsl) 0% / 60%);
+    --color-dark-alpha-50: hsl(var(--color-dark-hsl) 0% / 50%);
+    --color-dark-alpha-40: hsl(var(--color-dark-hsl) 0% / 40%);
+    --color-dark-alpha-30: hsl(var(--color-dark-hsl) 0% / 30%);
+    --color-dark-alpha-20: hsl(var(--color-dark-hsl) 0% / 20%);
+    --color-dark-alpha-10: hsl(var(--color-dark-hsl) 0% / 10%);
+
+    --color-light-hsl: 0deg 0%;
+    --color-light: hsl(var(--color-light-hsl) 100% / 100%);
+    --color-light-alpha-90: hsl(var(--color-light-hsl) 100% / 90%);
+    --color-light-alpha-80: hsl(var(--color-light-hsl) 100% / 80%);
+    --color-light-alpha-70: hsl(var(--color-light-hsl) 100% / 70%);
+    --color-light-alpha-60: hsl(var(--color-light-hsl) 100% / 60%);
+    --color-light-alpha-50: hsl(var(--color-light-hsl) 100% / 50%);
+    --color-light-alpha-40: hsl(var(--color-light-hsl) 100% / 40%);
+    --color-light-alpha-30: hsl(var(--color-light-hsl) 100% / 30%);
+    --color-light-alpha-20: hsl(var(--color-light-hsl) 100% / 20%);
+    --color-light-alpha-10: hsl(var(--color-light-hsl) 100% / 10%);
+
+    --color-gray-hsl: 0deg 0%;
+    --color-gray-10: hsl(var(--color-gray-hsl) 10% / 100%);
+    --color-gray-20: hsl(var(--color-gray-hsl) 20% / 100%);
+    --color-gray-30: hsl(var(--color-gray-hsl) 30% / 100%);
+    --color-gray-40: hsl(var(--color-gray-hsl) 40% / 100%);
+    --color-gray: hsl(var(--color-gray-hsl) 50% /100%);
+    --color-gray-60: hsl(var(--color-gray-hsl) 60% / 100%);
+    --color-gray-70: hsl(var(--color-gray-hsl) 70% / 100%);
+    --color-gray-80: hsl(var(--color-gray-hsl) 80% / 100%);
+    --color-gray-90: hsl(var(--color-gray-hsl) 90% / 100%);
+}

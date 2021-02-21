@@ -1,11 +1,14 @@
-@import url(./vars.css);
+@import "colors.css";
+@import "shadow.css";
+@import "layers.css";
+@import "font.css";
 
 *,
 ::after,
 ::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     text-decoration: none;
+    box-sizing: border-box;
     font-family: var(--font-primary);
 }

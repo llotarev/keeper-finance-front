@@ -1,0 +1,4 @@
+:root {
+    --shadow-button: inset 0 -.2em .4em 0 var(--color-dark-alpha-10);
+    --shadow-button-text: 0 .1em .2em var(--color-dark-alpha-40);
+}

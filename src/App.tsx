@@ -1,21 +1,17 @@
-import React from 'react';
-import './App.css';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-import {routes} from './routes';
-import {Finance} from "./components/Finance";
-import {Header} from './components/Header';
-import {Button} from "./components/UIKit/Button";
+import React from "react";
+import "./App.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import { UIKit } from "./components/UIKit";
+
+const { Button, Input } = UIKit;
 
 export function App() {
-
-    return (
-        <Router>
-            <div className='app'>
-                <Route path={routes.root}>
-                    <Header/>
-                    <Finance/>
-                </Route>
-            </div>
-        </Router>
-    );
+  return (
+    <Router>
+      <div className="app">
+        <Input defaultValue="sds" />
+        <Button>Button</Button>
+      </div>
+    </Router>
+  );
 }

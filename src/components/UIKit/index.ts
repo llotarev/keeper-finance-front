@@ -1,15 +1,7 @@
-import {Input} from "./Input";
-import {Button} from "./Button";
-import {ButtonGroup} from "./ButtonGroup";
-import {Textarea} from "./Textarea";
-import {Label} from "./Label";
-import {Alerts} from "./Alerts";
+import { Button } from "./Button";
+import { Input } from "./Input";
 
 export const UIKit = {
-    Input,
-    Button,
-    ButtonGroup,
-    Textarea,
-    Label,
-    Alerts
-}
+  Button,
+  Input,
+};

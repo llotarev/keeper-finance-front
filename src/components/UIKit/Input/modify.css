@@ -1,0 +1,13 @@
+.button-secondary {
+    color: var(--color-secondary-90);
+    background: var(--color-secondary);
+}
+
+.button-secondary:hover {
+    background: var(--color-secondary-60);
+}
+
+.button-secondary:focus {
+    box-shadow: var(--shadow-button),
+    0 0 0 .2em var(--color-secondary-90);
+}

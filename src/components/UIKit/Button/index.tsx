@@ -1,23 +1,25 @@
-import React, {ButtonHTMLAttributes, FC} from "react";
-import './style.css'
+import React from "react";
+import "./style.css";
+import "./modify.css";
 import cn from "../styles/classNames";
-import {UIKitColorsType} from "../UIKitTypes";
+import { UIKitThemeColorType } from "../styles/theme";
 
-export interface UIKitButtonElement extends ButtonHTMLAttributes<HTMLButtonElement> {
-    color?: UIKitColorsType
-    variant?: "link" | "outline" | "glass"
+export interface UIKitButtonPropsInterface
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  color?: UIKitThemeColorType;
 }
 
-export const Button: FC<UIKitButtonElement> = (props) => {
+export const Button: React.FC<UIKitButtonPropsInterface> = (props) => {
+  const { className, color, ...other } = props;
 
-    const {className, variant, color, ...other} = props
-
-    return (
-        <button className={cn({
-            [String(className)]: true,
-            "button": true,
-            ["button--" + variant]: Boolean(variant),
-            ["button-color--" + color]: Boolean(color),
-        })}{...other}/>
-    )
-}
+  return (
+    <button
+      className={cn({
+        button: true,
+        ["button-" + color]: Boolean(color),
+        [String(className)]: true,
+      })}
+      {...other}
+    />
+  );
+};

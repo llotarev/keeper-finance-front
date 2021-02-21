@@ -1,4 +1,4 @@
-import {createSlice, createSelector, PayloadAction} from "@reduxjs/toolkit";
+import {createSelector, createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {financeThunk} from "./thunk";
 import {StateType} from "../../index";
 import {FinanceType, IFinance} from "../../../api";
@@ -38,7 +38,9 @@ export const financeReducerSelectors = {
     getFilter: (state: StateType) => state.financeReducer.filter,
     getFinance: (state: StateType) => state.financeReducer.finance,
 
-    /* @Reselect */
+    /**
+     * Reselectors
+     * */
     getFinanceOne: (finance_id: number) => createSelector(
         (state: StateType) => state.financeReducer.finance,
         (finance) => finance.find(({id}) => id === finance_id)

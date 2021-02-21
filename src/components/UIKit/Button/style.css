@@ -1,125 +1,47 @@
 .button {
-    height: 2.6em;
-    font: normal normal 18px / 18px var(--font-primary);
-    background: rgba(var(--color-primary), 1);
-    color: rgba(var(--color-white), 1);
-    padding: 0.6em;
+    /*main style*/
+    height: 2.4em;
+    padding: .6em;
+    border-radius: .6em;
+    font: normal normal 20px / 20px var(--font-primary);
+    box-shadow: inset 0 -.2em .4em hsl(var(--color-primary-hsl) 10% / 20%);
+    text-shadow: 0 .1em .2em hsl(var(--color-primary-hsl) 10% / 50%);
+    background: var(--color-primary);
+    color: var(--color-primary-90);
+    cursor: pointer;
+
+    /*reset*/
     border: none;
     outline: none;
     appearance: none;
-    border-radius: 0.6em;
 
-    /* base animation */
-    --transition-duration: .2s;
-
-    transition: opacity ease var(--transition-duration),
-    color ease var(--transition-duration),
-    border ease var(--transition-duration),
-    box-shadow ease var(--transition-duration),
-    background ease var(--transition-duration),
-    font-size ease var(--transition-duration);
-    will-change: opacity,
-    color,
-    border,
+    /*animation*/
+    transition: background-color ease-in .2s,
+    box-shadow ease-in .2s,
+    color ease-in .2s;
+    will-change: background-color,
     box-shadow,
-    background,
-    font-size;
+    color;
+
 }
 
-/* @State */
-/* [base] */
 .button:hover {
-    opacity: .8;
+    background: var(--color-primary-60);
 }
 
 .button:focus {
-    box-shadow: 0 0 0 0.2em rgba(var(--color-primary), .2);
+    box-shadow: inset 0 -.2em .4em hsl(var(--color-primary-hsl) 10% / 20%),
+    0 0 0 .2em hsl(var(--color-primary-hsl) 50% / 20%);
 }
 
-.button:active {
-    box-shadow: 0 0 0 0.2em rgba(var(--color-primary), .2),
-    inset 0 0 1.2em rgba(var(--color-dark), .2);
-}
-
-.button:disabled {
-    background: rgba(var(--color-dark), .2);
-    color: rgba(var(--color-dark), .4);
+.button:disabled,
+.button:hover:disabled,
+.button:focus:disabled {
+    color: var(--color-gray-90);
+    background: var(--color-gray-80);
     cursor: not-allowed;
 }
 
-/* @Modify */
-/* [glass] */
-.button--glass {
-    background: rgba(var(--color-primary), .2);
-    color: rgba(var(--color-primary), 1);
-}
 
-.button--glass:focus {
-    box-shadow: 0 0 0 0.2em rgba(var(--color-primary), .4);
-}
 
-.button--glass:active {
-    box-shadow: 0 0 0 0.2em rgba(var(--color-primary), .4),
-    inset 0 0 1.2em rgba(var(--color-primary), .2);
-}
 
-/* [outline] */
-.button--outline {
-    background: transparent;
-    border: 0.12em solid rgba(var(--color-primary), 1);
-    color: rgba(var(--color-primary), 1);
-}
-
-.button--outline:active {
-    box-shadow: 0 0 0 0.2em rgba(var(--color-primary), .2),
-    inset 0 0 1.2em rgba(var(--color-primary), .2);
-}
-
-.button--outline:disabled {
-    background: transparent;
-    color: rgba(var(--color-dark), .4);
-    border-color: rgba(var(--color-dark), .4);
-    cursor: not-allowed;
-}
-
-/* [link] */
-.button--link {
-    background: transparent;
-    color: rgba(var(--color-primary), 1);
-}
-
-.button--link:focus {
-    text-decoration: underline;
-    box-shadow: none;
-}
-
-.button--link:active {
-    box-shadow: none;
-}
-
-.button--link:disabled {
-    background-color: transparent;
-    box-shadow: none;
-}
-
-/* @Set */
-/* [color] */
-.button-color--info {
-    --color-primary: var(--color-info);
-}
-
-.button-color--warning {
-    --color-primary: var(--color-warning);
-}
-
-.button-color--danger {
-    --color-primary: var(--color-danger);
-}
-
-.button-color--secondary {
-    --color-primary: var(--color-secondary);
-}
-
-.button-color--success {
-    --color-primary: var(--color-success);
-}

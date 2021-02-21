@@ -2,7 +2,6 @@ import {Dispatch} from "react";
 import {StateType} from "../../index";
 import {Finance, IFinance, IFinanceUpdate} from "../../../api";
 import {financeReducerActions} from "./index";
-import {uiReducerActions} from "../ui";
 
 export function financeThunk() {
 
@@ -34,10 +33,7 @@ export function financeThunk() {
                         break;
                 }
             } catch (e) {
-                dispatch(uiReducerActions.setMessages({
-                    type: "danger",
-                    text: String(e)
-                }))
+
             }
         }
     }
@@ -71,10 +67,7 @@ export function financeThunk() {
                         break;
                 }
             } catch (e) {
-                dispatch(uiReducerActions.setMessages({
-                    type: "danger",
-                    text: JSON.stringify(e)
-                }))
+
             }
         }
     }
@@ -111,10 +104,7 @@ export function financeThunk() {
                         break;
                 }
             } catch (e) {
-                dispatch(uiReducerActions.setMessages({
-                    type: "danger",
-                    text: JSON.stringify(e)
-                }))
+
             }
         }
     }
@@ -151,10 +141,7 @@ export function financeThunk() {
                         break;
                 }
             } catch (e) {
-                dispatch(uiReducerActions.setMessages({
-                    type: "danger",
-                    text: JSON.stringify(e)
-                }))
+
             }
         }
     }
