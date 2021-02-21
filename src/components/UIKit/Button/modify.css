@@ -1,6 +1,8 @@
 .button-secondary {
     color: var(--color-secondary-90);
     background: var(--color-secondary);
+    box-shadow: inset 0 -.2em .4em hsl(var(--color-secondary-hsl) 10% / 20%);
+    text-shadow: 0 .1em .2em hsl(var(--color-secondary-hsl) 10% / 50%);
 }
 
 .button-secondary:hover {
@@ -8,6 +10,6 @@
 }
 
 .button-secondary:focus {
-    box-shadow: var(--shadow-button),
-    0 0 0 .2em var(--color-secondary-90);
+    box-shadow: inset 0 -.2em .4em hsl(var(--color-secondary-hsl) 10% / 20%),
+    0 0 0 .2em hsl(var(--color-secondary-hsl) 50% / 20%);
 }
