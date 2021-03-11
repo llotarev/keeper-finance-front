@@ -21,9 +21,15 @@
     0 0 0 .2em hsl(var(--color-primary-hsl) 50% / 20%);
 }
 
+
+
 /*TODO придумать состояние для hover*/
 .input:hover {
 
+}
+
+.input::placeholder{
+    color: var(--color-primary-90);
 }
 
 .input:disabled,

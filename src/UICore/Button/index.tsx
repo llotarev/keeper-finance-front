@@ -2,14 +2,14 @@ import React from "react";
 import "./style.css";
 import "./modify.css";
 import cn from "../styles/classNames";
-import { UIKitThemeColorType } from "../styles/theme";
+import { UICoreThemeColorType } from "../styles/theme";
 
-export interface UIKitButtonPropsInterface
+export interface UICoreButtonPropsInterface
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  color?: UIKitThemeColorType;
+  color?: UICoreThemeColorType;
 }
 
-export const Button: React.FC<UIKitButtonPropsInterface> = (props) => {
+export const Button: React.FC<UICoreButtonPropsInterface> = (props) => {
   const { className, color, ...other } = props;
 
   return (

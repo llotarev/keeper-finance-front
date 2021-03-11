@@ -2,14 +2,14 @@ import React from "react";
 import "./style.css";
 import "./modify.css";
 import cn from "../styles/classNames";
-import { UIKitThemeColorType } from "../styles/theme";
+import { UICoreThemeColorType } from "../styles/theme";
 
-export interface UIKitInputPropsInterface
+export interface UICoreInputPropsInterface
   extends React.InputHTMLAttributes<HTMLInputElement> {
-  color?: UIKitThemeColorType;
+  color?: UICoreThemeColorType;
 }
 
-export const Input: React.FC<UIKitInputPropsInterface> = (props) => {
+export const Input: React.FC<UICoreInputPropsInterface> = (props) => {
   const { className, color, ...other } = props;
 
   return (

@@ -1,4 +1,4 @@
-@import "./components/UIKit/styles/index.css";
+@import "UICore/styles/index.css";
 
 .app {
     /*background: var(--color-primary-90);*/

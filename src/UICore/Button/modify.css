@@ -1,0 +1,45 @@
+
+/*primary default*/
+.button-primary {color: var(--color-primary-90);background: var(--color-primary);box-shadow: inset 0 -.2em .4em hsl(var(--color-primary-hsl) 10% / 20%);text-shadow: 0 .1em .2em hsl(var(--color-primary-hsl) 10% / 50%)}
+.button-primary:focus{box-shadow: inset 0 -.2em .4em hsl(var(--color-primary-hsl) 10% / 20%), 0 0 0 .2em hsl(var(--color-primary-hsl) 50% / 20%)}
+.button-primary:hover{background: var(--color-primary-60)}
+
+/*secondary default*/
+.button-secondary {color: var(--color-secondary-90);background: var(--color-secondary);box-shadow: inset 0 -.2em .4em hsl(var(--color-secondary-hsl) 10% / 20%);text-shadow: 0 .1em .2em hsl(var(--color-secondary-hsl) 10% / 50%)}
+.button-secondary:focus{box-shadow: inset 0 -.2em .4em hsl(var(--color-secondary-hsl) 10% / 20%), 0 0 0 .2em hsl(var(--color-secondary-hsl) 50% / 20%)}
+.button-secondary:hover{background: var(--color-secondary-60)}
+
+/*info default*/
+.button-info {color: var(--color-info-90);background: var(--color-info);box-shadow: inset 0 -.2em .4em hsl(var(--color-info-hsl) 10% / 20%);text-shadow: 0 .1em .2em hsl(var(--color-info-hsl) 10% / 50%)}
+.button-info:focus{box-shadow: inset 0 -.2em .4em hsl(var(--color-info-hsl) 10% / 20%), 0 0 0 .2em hsl(var(--color-info-hsl) 50% / 20%)}
+.button-info:hover{background: var(--color-info-60)}
+
+/*success default*/
+.button-success {color: var(--color-success-90);background: var(--color-success);box-shadow: inset 0 -.2em .4em hsl(var(--color-success-hsl) 10% / 20%);text-shadow: 0 .1em .2em hsl(var(--color-success-hsl) 10% / 50%)}
+.button-success:focus{box-shadow: inset 0 -.2em .4em hsl(var(--color-success-hsl) 10% / 20%), 0 0 0 .2em hsl(var(--color-success-hsl) 50% / 20%)}
+.button-success:hover{background: var(--color-success-60)}
+
+/*warning default*/
+.button-warning {color: var(--color-warning-90);background: var(--color-warning);box-shadow: inset 0 -.2em .4em hsl(var(--color-warning-hsl) 10% / 20%);text-shadow: 0 .1em .2em hsl(var(--color-warning-hsl) 10% / 50%)}
+.button-warning:focus{box-shadow: inset 0 -.2em .4em hsl(var(--color-warning-hsl) 10% / 20%), 0 0 0 .2em hsl(var(--color-warning-hsl) 50% / 20%)}
+.button-warning:hover{background: var(--color-warning-60)}
+
+/*danger default*/
+.button-danger {color: var(--color-danger-90);background: var(--color-danger);box-shadow: inset 0 -.2em .4em hsl(var(--color-danger-hsl) 10% / 20%);text-shadow: 0 .1em .2em hsl(var(--color-danger-hsl) 10% / 50%)}
+.button-danger:focus{box-shadow: inset 0 -.2em .4em hsl(var(--color-danger-hsl) 10% / 20%), 0 0 0 .2em hsl(var(--color-danger-hsl) 50% / 20%)}
+.button-danger:hover{background: var(--color-danger-60)}
+
+/*dark default*/
+.button-dark {color: var(--color-dark-90);background: var(--color-dark);box-shadow: inset 0 -.2em .4em hsl(var(--color-dark-hsl) 10% / 20%);text-shadow: 0 .1em .2em hsl(var(--color-dark-hsl) 10% / 50%)}
+.button-dark:focus{box-shadow: inset 0 -.2em .4em hsl(var(--color-dark-hsl) 10% / 20%), 0 0 0 .2em hsl(var(--color-dark-hsl) 50% / 20%)}
+.button-dark:hover{background: var(--color-dark-60)}
+
+/*light default*/
+.button-light {color: var(--color-light-90);background: var(--color-light);box-shadow: inset 0 -.2em .4em hsl(var(--color-light-hsl) 10% / 20%);text-shadow: 0 .1em .2em hsl(var(--color-light-hsl) 10% / 50%)}
+.button-light:focus{box-shadow: inset 0 -.2em .4em hsl(var(--color-light-hsl) 10% / 20%), 0 0 0 .2em hsl(var(--color-light-hsl) 50% / 20%)}
+.button-light:hover{background: var(--color-light-60)}
+
+/*gray default*/
+.button-gray {color: var(--color-gray-90);background: var(--color-gray);box-shadow: inset 0 -.2em .4em hsl(var(--color-gray-hsl) 10% / 20%);text-shadow: 0 .1em .2em hsl(var(--color-gray-hsl) 10% / 50%)}
+.button-gray:focus{box-shadow: inset 0 -.2em .4em hsl(var(--color-gray-hsl) 10% / 20%), 0 0 0 .2em hsl(var(--color-gray-hsl) 50% / 20%)}
+.button-gray:hover{background: var(--color-gray-60)}
